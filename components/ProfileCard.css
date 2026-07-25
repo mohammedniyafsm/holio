@@ -1,0 +1,128 @@
+/* ProfileCard.css placeholder to resolve build error */
+.pc-card-wrapper {
+  position: relative;
+  display: inline-block;
+  perspective: 1000px;
+  touch-action: none;
+}
+
+.pc-card-shell {
+  position: relative;
+  z-index: 1;
+  border-radius: 12px;
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out;
+}
+
+.pc-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #222222;
+  background: #0d0d0d;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  transform-style: preserve-3d;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.pc-inside {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.pc-avatar-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pc-content {
+  position: relative;
+  z-index: 2;
+}
+
+.pc-user-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+}
+
+.pc-user-details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pc-mini-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.pc-mini-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pc-handle {
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.pc-status {
+  font-size: 10px;
+  color: #4ade80;
+}
+
+.pc-contact-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pc-contact-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.pc-details {
+  padding: 12px 14px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.pc-details h3 {
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+}
+
+.pc-details p {
+  font-size: 12px;
+  color: #888;
+  margin: 2px 0 0 0;
+}
