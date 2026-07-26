@@ -58,7 +58,7 @@ export const projects: ProjectData[] = [
     description: "Nuvée is a perfume ecommerce platform featuring product browsing, filtering, cart, wishlist, Razorpay payments, and an admin dashboard.",
     imageUrl: "/nuvee.png",
     sourceUrl: "https://github.com/mohammedniyafsm/Nuv-e",
-    liveUrl: "https://nuvee-perfume.example.com",
+    liveUrl: "https://nuvee-perfume.niyaf.in",
     tags: [
       { label: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
       { label: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
