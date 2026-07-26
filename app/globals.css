@@ -58,8 +58,6 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
-  width: 100%;
 }
 
 body {
@@ -69,8 +67,6 @@ body {
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
-  width: 100%;
 }
 
 /* Grid Background (Home) */
@@ -1055,6 +1051,8 @@ body {
   }
 
   .project-card {
+    position: relative !important;
+    top: auto !important;
     padding: 20px 16px;
     gap: 16px;
     border-radius: 16px;
