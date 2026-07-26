@@ -53,6 +53,7 @@ export const projects: ProjectData[] = [
       { label: "TurboRepo", emoji: "🚀" },
     ],
   },
+
   {
     title: "Nuvée Perfume Ecommerce",
     description: "Nuvée is a perfume ecommerce platform featuring product browsing, filtering, cart, wishlist, Razorpay payments, and an admin dashboard.",
