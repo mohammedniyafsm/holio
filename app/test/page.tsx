@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { GitHubCalendar } from 'react-github-calendar';
 import {
-  GitBranch, BriefcaseBusiness, Bird, Mail, FileText, MapPin, Sun,
+  GitBranch, BriefcaseBusiness, Bird, Mail, FileText, MapPin, Sun, Moon,
   ArrowRight, ArrowUpRight, Package, Circle, Globe
 } from "lucide-react";
 
@@ -13,12 +13,12 @@ import {
 const NAV = ["Home", "Projects", "Contact"];
 
 const ABOUT = [
-  <>I'm a full-stack engineer who spends a disproportionate amount of time asking "but how does this actually work ?" and then following that question until I have a real answer.</>,
-  <>Most engineers stop at the API boundary. I tend to keep going. That usually means digging into networking, databases, distributed systems, authentication, infrastructure, security, and blockchain systems — not just using them, but understanding the decisions and trade-offs behind them.</>,
-  // <>Lately I've been exploring 🌐Web3 infrastructure, ⚡Solana, 🦀Rust, cryptography, 👛Wallet Arch, key management, and transaction signing. More often than not, a small question turns into a deep technical rabbit hole.</>,
-  // <>I'm always building, experimenting, and learning. If you're interested in systems, infrastructure, security, blockchain, or difficult engineering problems, we'll probably get along.</>,
-  <>I'm open to new roles, collaborations, and opportunities. Feel free to reach out at <a href="mailto:mohammedniyafsm@gmail.com" style={{ textDecoration: 'underline', color: 'var(--text)' }}>mohammedniyafsm@gmail.com</a>.</>,
-  // <>If you're here, chances are I'd enjoy talking to you. I get nerd-sniped easily, and a message about something that recently fascinated you would honestly make my day.</>
+  <span>I'm a full-stack engineer who spends a disproportionate amount of time asking "but how does this actually work ?" and then following that question until I have a real answer.</span>,
+  <span>Most engineers stop at the API boundary. I tend to keep going. That usually means digging into networking, databases, distributed systems, authentication, infrastructure, security, and blockchain systems — not just using them, but understanding the decisions and trade-offs behind them.</span>,
+  // <span>Lately I've been exploring 🌐Web3 infrastructure, ⚡Solana, 🦀Rust, cryptography, 👛Wallet Arch, key management, and transaction signing. More often than not, a small question turns into a deep technical rabbit hole.</span>,
+  // <span>I'm always building, experimenting, and learning. If you're interested in systems, infrastructure, security, blockchain, or difficult engineering problems, we'll probably get along.</span>,
+  <span>I'm open to new roles, collaborations, and opportunities. Feel free to reach out at <a href="mailto:mohammedniyafsm@gmail.com" style={{ textDecoration: 'underline', color: 'var(--text)' }}>mohammedniyafsm@gmail.com</a>.</span>,
+  // <span>If you're here, chances are I'd enjoy talking to you. I get nerd-sniped easily, and a message about something that recently fascinated you would honestly make my day.</span>
 ];
 
 const HIGHLIGHTS = [
@@ -153,15 +153,24 @@ function GlobalStyle() {
     <style>{`
       @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
+      html { scroll-padding-top: 64px; scroll-behavior: smooth; }
       .pf *{ box-sizing:border-box; }
       .pf{
         --bg:#0a0a0a; --panel:#131313; --panel-2:#161616;
         --line:rgba(255,255,255,0.14); --line-soft:rgba(255,255,255,0.07);
         --text:#f3f1ea; --muted:#a3a39d; --faint:#6b6b68;
         --accent:#3ecf8e;
+        --header-bg:rgba(10,10,10,0.9);
         background:var(--bg); color:var(--text);
         font-family:'Inter',system-ui,sans-serif;
         font-size:14px; line-height:1.6; min-height:100vh;
+      }
+      .pf.light{
+        --bg:#ffffff; --panel:#f8f9fa; --panel-2:#f1f3f5;
+        --line:rgba(0,0,0,0.1); --line-soft:rgba(0,0,0,0.05);
+        --text:#111111; --muted:#555555; --faint:#888888;
+        --accent:#3ecf8e;
+        --header-bg:rgba(255,255,255,0.9);
       }
       .pf-serif{ font-family:'Newsreader',Georgia,serif; }
       .pf-mono{ font-family:'JetBrains Mono',ui-monospace,monospace; }
@@ -172,7 +181,7 @@ function GlobalStyle() {
       @media (min-width:768px){ .pf-pad{ padding-left:40px; padding-right:40px; } }
 
       /* ---- header ---- */
-      .pf-header{ position:sticky; top:0; z-index:30; background:rgba(10,10,10,0.9); backdrop-filter:blur(6px); border-bottom:1px solid var(--line); }
+      .pf-header{ position:sticky; top:0; z-index:30; background:var(--header-bg); backdrop-filter:blur(6px); border-bottom:1px solid var(--line); }
       .pf-header-row{ display:flex; align-items:center; justify-content:space-between; height:56px; }
       .pf-logo{ font-size:19px; }
       .pf-nav{ display:none; align-items:center; gap:24px; font-size:11px; color:var(--muted); }
@@ -301,7 +310,7 @@ function GlobalStyle() {
       .pf-tabs::-webkit-scrollbar{ display:none; }
       .pf-tab{ flex-shrink:0; font-size:13px; font-weight:500; padding:6px 14px; border-radius:6px; border:none; color:var(--muted); background:transparent; white-space:nowrap; cursor:pointer; transition:all 0.2s; }
       .pf-tab:hover{ color:var(--text); }
-      .pf-tab.active{ background:var(--text); color:#0a0a0a; }
+      .pf-tab.active{ background:var(--text); color:var(--bg); }
       .pf-pill-grid{ display:flex; flex-wrap:wrap; gap:8px; }
       .pf-pill{ display:inline-flex; align-items:center; border:1px solid var(--line); color:var(--muted); background:transparent; font-size:11px; font-family:'JetBrains Mono',monospace; padding:4px 10px; border-radius:6px; }
       .pf-pill span{ color:var(--faint); margin-right:4px; }
@@ -328,7 +337,7 @@ function GlobalStyle() {
       .pf-cta-title{ margin-bottom:32px; }
       .pf-cta-center{ text-align:center; padding:24px 0; }
       .pf-cta-text{ font-size:13px; color:var(--muted); margin-bottom:24px; }
-      .pf-cta-btn{ display:inline-flex; align-items:center; gap:8px; background:var(--text); color:#0a0a0a; font-size:13px; font-weight:500; padding:12px 20px; border-radius:8px; text-decoration:none; }
+      .pf-cta-btn{ display:inline-flex; align-items:center; gap:8px; background:var(--text); color:var(--bg); font-size:13px; font-weight:500; padding:12px 20px; border-radius:8px; text-decoration:none; }
       .pf-quote-wrap{ padding:56px 20px; text-align:center; }
       @media (min-width:768px){ .pf-quote-wrap{ padding:56px 64px; } }
       .pf-quote-mark{ font-family:'Newsreader',Georgia,serif; color:var(--faint); font-size:30px; margin-bottom:8px; }
@@ -372,7 +381,7 @@ function Section({ title, right, children }: { title?: string; right?: React.Rea
 /*  SECTIONS                                                           */
 /* ------------------------------------------------------------------ */
 
-function Header() {
+function Header({ theme, toggleTheme }: { theme: string, toggleTheme: () => void }) {
   return (
     <div className="pf-header">
       <div className="pf-wrap">
@@ -380,12 +389,14 @@ function Header() {
           <span className="pf-serif pf-logo">Niyaf</span>
           <div className="pf-header-right">
             <nav className="pf-nav">
-              {NAV.map((n) => <a key={n} href="#">{n}</a>)}
+              {NAV.map((n) => <a key={n} href={`#${n.toLowerCase()}`}>{n}</a>)}
             </nav>
             <nav className="pf-nav-mobile">
-              {NAV.map((n) => <a key={n} href="#">{n}</a>)}
+              {NAV.map((n) => <a key={n} href={`#${n.toLowerCase()}`}>{n}</a>)}
             </nav>
-            <button className="pf-toggle" aria-label="Toggle theme"><Sun size={14} strokeWidth={2} /></button>
+            <button className="pf-toggle" aria-label="Toggle theme" onClick={toggleTheme}>
+              {theme === "dark" ? <Sun size={14} strokeWidth={2} /> : <Moon size={14} strokeWidth={2} />}
+            </button>
           </div>
         </div>
       </div>
@@ -395,7 +406,7 @@ function Header() {
 
 function Hero() {
   return (
-    <div className="pf-wrap">
+    <div className="pf-wrap" id="home">
       <div className="pf-banner" />
       <div className="pf-pad">
         <div className="pf-profile-row">
@@ -442,7 +453,7 @@ function Highlights() {
 
 function Contact() {
   return (
-    <>
+    <div id="contact">
       <div className="pf-heading-band">
         <div className="pf-heading-inner">
           <div className="pf-pad pf-heading-row">
@@ -461,7 +472,7 @@ function Contact() {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
@@ -512,7 +523,7 @@ function ProjectCard({ p }: { p: any }) {
 
 function Projects() {
   return (
-    <>
+    <div id="projects">
       <div className="pf-heading-band">
         <div className="pf-heading-inner">
           <div className="pf-pad pf-heading-row">
@@ -526,7 +537,7 @@ function Projects() {
           {PROJECTS.map((p) => <ProjectCard key={p.name} p={p} />)}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
@@ -654,10 +665,13 @@ function CTA() {
 /* ------------------------------------------------------------------ */
 
 export default function PortfolioClone() {
+  const [theme, setTheme] = useState("dark");
+  const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark");
+
   return (
-    <div className="pf">
+    <div className={`pf ${theme}`}>
       <GlobalStyle />
-      <Header />
+      <Header theme={theme} toggleTheme={toggleTheme} />
       <Hero />
       <About />
       {/* <Highlights /> */}
