@@ -1,0 +1,32 @@
+# Mohammed Niyaf - Portfolio
+
+Mohammed Niyaf is a passionate Full-stack Software Engineer and Web3 Developer. He is deeply driven by a love for Core Computer Science, systems architecture, and solving hard engineering problems. He seeks roles built on genuine engineering passion rather than just financial gain.
+
+## Services & Roles Seeking
+- Full-time Core CS Engineering Roles
+- Freelance Web & Systems Development
+- Fullstack Engineering Internships
+- Web3 and Blockchain Development
+
+## Tech Stack & Core Competencies
+- Core CS: Distributed Systems, Systems Architecture, Networking, Security
+- Frontend: React.js, Next.js, Tailwind CSS, TypeScript
+- Backend: Node.js, Express.js, System Design
+- Cloud & DevOps: AWS, Docker, NGINX, CI/CD, Infrastructure
+- Databases: PostgreSQL, MongoDB, Prisma, Redis
+- Web3 & Blockchain: Solana, Rust, Smart Contracts, Blockchain Infrastructure, Cryptography
+
+## Locations (Available For Remote, Hybrid & On-Site)
+- Kerala, India
+- Karnataka, India
+- Bangalore, India
+- Mumbai, India
+- Delhi, India
+- San Francisco, USA
+- USA (Remote)
+- Global (Remote)
+
+## Contact
+- GitHub: https://github.com/mohammedniyafsm
+- LinkedIn: https://www.linkedin.com/in/mohammad-niyaf-s-m-692801259
+- Twitter: https://x.com/n1yaf_
