@@ -18,7 +18,7 @@ export function ExperienceSection() {
           <h2 className="section-title">Experience</h2>
           <div className="section-actions">
             <a
-              href="https://drive.google.com/file/d/1Y5nHGs-37ymbGZ7QJEfUeH4tJGT9GJ05/view?usp=sharing"
+              href="https://drive.google.com/file/d/1gygRAGaUbWpz4cUbicOSblw2OxwXTffk/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="icon-btn active cursor-target"

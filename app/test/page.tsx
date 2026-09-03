@@ -31,7 +31,7 @@ const CONTACTS = [
   { label: "LinkedIn", Icon: BriefcaseBusiness, href: "https://www.linkedin.com/in/mohammad-niyaf-s-m-692801259" },
   { label: "Twitter", Icon: Bird, href: "https://x.com/n1yaf_" },
   { label: "Mail", Icon: Mail, href: "mailto:mohammedniyafsm@gmail.com" },
-  { label: "Resume", Icon: FileText, href: "https://drive.google.com/file/d/1Y5nHGs-37ymbGZ7QJEfUeH4tJGT9GJ05/view" },
+  { label: "Resume", Icon: FileText, href: "https://drive.google.com/file/d/1gygRAGaUbWpz4cUbicOSblw2OxwXTffk/view?usp=sharing" },
 ];
 
 const PROJECTS = [
