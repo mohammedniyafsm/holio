@@ -39,6 +39,7 @@ const PROJECTS = [
     name: "Townify ( 2D metaverse )", org: "Personal Project", status: "Live", featured: false,
     imageUrl: "/Townify.png",
     sourceUrl: "https://github.com/mohammedniyafsm/Townify",
+    demoUrl: "https://drive.google.com/file/d/1Im1cWQmSRHtQ9S2S8Czo2mgejaiDtZdN/view?usp=sharing",
     desc: "Townify is a 2D metaverse platform that allows users to explore virtual spaces, interact with others, and engage in real-time social experiences.",
     tags: ["React", "TypeScript", "Phaser", "Node.js", "Express", "WebSockets", "WebRTC", "PostgreSQL", "Prisma", "Redis", "Docker", "OAuth", "Tailwind CSS"]
   },
@@ -46,6 +47,7 @@ const PROJECTS = [
     name: "Nuvée Perfume Ecommerce", org: "Personal Project", status: "Live", featured: false,
     imageUrl: "/nuvee.png",
     sourceUrl: "https://github.com/mohammedniyafsm/Nuv-e",
+    liveUrl: "https://nuvee-perfume.niyaf.in",
     desc: "Nuvée is a perfume ecommerce platform featuring product browsing, filtering, cart, wishlist, Razorpay payments, and an admin dashboard.",
     tags: ["React", "TypeScript", "Razorpay", "Redux", "Node.js", "Express", "MongoDB", "Tailwind CSS"]
   },
@@ -476,15 +478,6 @@ function Contact() {
   );
 }
 
-function GithubIcon({ size = 14, color = "currentColor" }) {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-      <path d="M9 18c-4.51 2-5-2-7-2" />
-    </svg>
-  );
-}
-
 function ProjectCard({ p }: { p: any }) {
   return (
     <div className="pf-project-card">
@@ -509,11 +502,11 @@ function ProjectCard({ p }: { p: any }) {
             {p.tags.map((t: string) => <span key={t} className="pf-tag">{t}</span>)}
           </div>
         </div>
-        {p.sourceUrl && (
-          <div style={{ marginTop: '16px' }}>
-            <a href={p.sourceUrl} target="_blank" rel="noopener noreferrer" className="pf-source-btn">
-              <GithubIcon size={12} /> Source Code
-            </a>
+        {(p.sourceUrl || p.demoUrl || p.liveUrl) && (
+          <div style={{ display: 'flex', gap: '8px', marginTop: '16px' }}>
+            {p.sourceUrl && <a href={p.sourceUrl} target="_blank" rel="noopener noreferrer" className="pf-source-btn">Source Code</a>}
+            {p.demoUrl && <a href={p.demoUrl} target="_blank" rel="noopener noreferrer" className="pf-source-btn">Demo Link</a>}
+            {p.liveUrl && <a href={p.liveUrl} target="_blank" rel="noopener noreferrer" className="pf-source-btn">Live Link</a>}
           </div>
         )}
       </div>
