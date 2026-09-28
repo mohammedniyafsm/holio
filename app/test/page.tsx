@@ -36,12 +36,31 @@ const CONTACTS = [
 
 const PROJECTS = [
   {
+    name: "CryptoLattice",
+    imageUrl: "/cex.png",
+    sourceUrl: "https://github.com/mohammedniyafsm/Exchange-CEX",
+    // demoUrl: "<your deployed demo URL>",
+    desc: "A centralized cryptocurrency exchange with an order-matching engine, real-time market updates, and persistent trade data.",
+    tags: ["React", "TypeScript", "Node.js", "Express", "Redis", "WebSockets", "PostgreSQL", "Prisma", "Docker", "Pub/Sub", "Turborepo", "TimescaleDB"]
+  },
+  {
     name: "Townify ( 2D metaverse )", org: "Personal Project", status: "Live", featured: false,
     imageUrl: "/Townify.png",
     sourceUrl: "https://github.com/mohammedniyafsm/Townify",
     demoUrl: "https://drive.google.com/file/d/1Im1cWQmSRHtQ9S2S8Czo2mgejaiDtZdN/view?usp=sharing",
     desc: "Townify is a 2D metaverse platform that allows users to explore virtual spaces, interact with others, and engage in real-time social experiences.",
     tags: ["React", "TypeScript", "Phaser", "Node.js", "Express", "WebSockets", "WebRTC", "PostgreSQL", "Prisma", "Redis", "Docker", "OAuth", "Tailwind CSS"]
+  },
+  {
+    name: "Discord Bot & Dashboard",
+    org: "Personal Project",
+    status: "Live",
+    liveUrl: "https://discord-bot.niyaf.in/",
+    imageUrl: "/discord.png", // Replace with your actual image path
+    sourceUrl: "https://github.com/mohammedniyafsm/discord-project",
+    // demoUrl: "<your deployed demo URL>",
+    desc: "A serverless Discord bot and Next.js web dashboard featuring secure Ed25519 slash command verification, automated webhook provisioning, and a multi-tenant admin portal for server configuration.",
+    tags: ["React", "TypeScript", "Next.js", "Node.js", "PostgreSQL", "Prisma", "NextAuth"]
   },
   {
     name: "Nuvée Perfume Ecommerce", org: "Personal Project", status: "Live", featured: false,
@@ -588,8 +607,8 @@ function GithubActivity() {
     <Section title="GitHub Activity" right={<span style={{ display: "flex", alignItems: "center", gap: 6, color: "var(--accent)" }}><Circle size={7} fill="currentColor" stroke="none" /> Live</span>}>
       <div className="pf-gh-scroll" style={{ width: "100%", overflow: "hidden" }}>
         <div style={{ display: "flex", justifyContent: "center", width: "100%", paddingTop: "8px" }} className="gh-cal-wrap">
-          <GitHubCalendar 
-            username="mohammedniyafsm" 
+          <GitHubCalendar
+            username="mohammedniyafsm"
             colorScheme="dark"
             theme={{
               dark: ['#16121e', '#3b2c4c', '#664988', '#976ebf', '#d5a4eb'],
